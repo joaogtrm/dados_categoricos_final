@@ -1,0 +1,131 @@
+VARIÁVEIS CATEGÓRICAS SUGERIDAS PARA O ESTUDO
+==============================================
+
+Pergunta-guia: "Existe uma distinção clara entre as áreas dos cursos
+de graduação ofertados pelas instituições privadas e públicas no Brasil?"
+
+Fonte: Microdados do Censo da Educação Superior (INEP) – cadastro_cursos
+Observação: todas as variáveis abaixo são qualitativas (nominais ou
+ordinais). Variáveis QT_* foram descartadas por serem quantitativas
+de contagem (vagas, ingressantes, matrículas etc.).
+
+
+-------------------------------------------------------------------
+VARIÁVEIS DE AGRUPAMENTO (definem os grupos a comparar)
+-------------------------------------------------------------------
+
+1) TP_CATEGORIA_ADMINISTRATIVA
+   Categoria administrativa da IES (Federal, Estadual, Municipal,
+   Privada com fins lucrativos, Privada sem fins lucrativos etc.).
+   → É o eixo central do estudo: permite distinguir pública x privada
+   com granularidade, podendo também ser recodificada em binária.
+
+2) TP_REDE
+   Rede de ensino (Pública / Privada).
+   → Versão binária e direta do agrupamento, útil para a análise
+   principal e para tabelas de contingência mais limpas.
+
+3) IN_GRATUITO
+   Indica se o curso é gratuito (Sim/Não).
+   → Complementa TP_REDE: nem toda IES pública oferece curso gratuito,
+   e em alguns casos privadas oferecem cursos gratuitos. Útil para
+   refinar a distinção pública/privada sob a ótica do aluno.
+
+
+-------------------------------------------------------------------
+VARIÁVEIS DE INTERESSE PRINCIPAL (áreas do conhecimento)
+-------------------------------------------------------------------
+
+4) NO_CINE_AREA_GERAL
+   Área geral do curso segundo a classificação CINE Brasil
+   (ex.: Ciências Sociais, Saúde, Engenharias, Educação etc.).
+   → Variável-chave da pergunta de pesquisa: é nela que se observa
+   a "área do curso" no nível mais agregado.
+
+5) NO_CINE_AREA_ESPECIFICA
+   Área específica do curso (nível intermediário do CINE).
+   → Permite aprofundar a análise quando a área geral mostrar
+   diferenças entre redes, identificando onde elas se concentram.
+
+6) NO_CINE_AREA_DETALHADA
+   Área detalhada do curso (nível mais fino do CINE).
+   → Útil para análises pontuais e exemplificação, embora possa
+   gerar tabelas esparsas se usada como variável principal.
+
+
+-------------------------------------------------------------------
+VARIÁVEIS DE CARACTERIZAÇÃO DA OFERTA (controles / cruzamentos)
+-------------------------------------------------------------------
+
+7) TP_GRAU_ACADEMICO
+   Grau acadêmico do curso (Bacharelado, Licenciatura, Tecnológico).
+   → Importante porque a distribuição entre os graus difere muito
+   entre redes (ex.: licenciaturas concentradas em IES públicas,
+   tecnológicos em privadas). Permite responder se a distinção
+   por área não é, na verdade, uma distinção por grau.
+
+8) TP_MODALIDADE_ENSINO
+   Modalidade de ensino (Presencial / EAD).
+   → A oferta EAD é fortemente desbalanceada entre redes e tem peso
+   diferente por área. Controlar por esta variável evita confundir
+   "diferença de área" com "diferença de modalidade".
+
+9) TP_ORGANIZACAO_ACADEMICA
+   Tipo de organização acadêmica (Universidade, Centro Universitário,
+   Faculdade, Instituto Federal, CEFET).
+   → Caracteriza o perfil institucional, que está correlacionado
+   tanto com a rede quanto com o portfólio de áreas ofertadas.
+
+10) TP_NIVEL_ACADEMICO
+    Nível acadêmico (Graduação / Sequencial).
+    → Permite restringir a análise estritamente a cursos de graduação,
+    em linha com o recorte do artigo.
+
+
+-------------------------------------------------------------------
+VARIÁVEIS GEOGRÁFICAS (estratificação)
+-------------------------------------------------------------------
+
+11) NO_REGIAO
+    Região geográfica do local de oferta (Norte, Nordeste, etc.).
+    → A presença de IES públicas e privadas varia regionalmente,
+    assim como o mix de áreas. Estratificar por região permite
+    verificar se a distinção observada é nacional ou regional.
+
+12) SG_UF
+    Unidade da Federação do local de oferta.
+    → Estratificação mais fina; útil para mapas e para análises
+    de robustez por estado.
+
+13) IN_CAPITAL
+    Indica se o curso é ofertado na capital (Sim/Não).
+    → Capital x interior costuma diferenciar fortemente o perfil
+    de oferta privada (concentrada em capitais e EAD) frente à
+    pública (mais capilarizada via IFs e universidades estaduais).
+
+
+-------------------------------------------------------------------
+VARIÁVEIS COMPLEMENTARES (apenas para subgrupo privado)
+-------------------------------------------------------------------
+
+14) IN_COMUNITARIA
+    Indica se a IES privada é comunitária (Sim/Não).
+15) IN_CONFESSIONAL
+    Indica se a IES privada é confessional (Sim/Não).
+    → Permitem analisar se, dentro do setor privado, há subgrupos
+    com perfil de áreas mais parecido com o público (ex.: comunitárias
+    e confessionais costumam ter forte presença em Saúde e Educação).
+
+
+-------------------------------------------------------------------
+RESUMO DA ESTRATÉGIA ANALÍTICA SUGERIDA
+-------------------------------------------------------------------
+
+- Variável-alvo: NO_CINE_AREA_GERAL (e, em segundo plano, AREA_ESPECIFICA).
+- Variável explicativa principal: TP_REDE ou TP_CATEGORIA_ADMINISTRATIVA.
+- Controles/cruzamentos: TP_GRAU_ACADEMICO, TP_MODALIDADE_ENSINO,
+  TP_ORGANIZACAO_ACADEMICA, NO_REGIAO, IN_CAPITAL.
+- Técnicas adequadas (todas para variáveis categóricas):
+  tabelas de contingência, teste Qui-quadrado de independência,
+  resíduos padronizados, V de Cramér e Análise de Correspondência
+  (simples ou múltipla) para visualizar a associação entre rede e área.
