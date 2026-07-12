@@ -53,3 +53,15 @@ Já citado em ref.bib (mota2012educacao). 92% dos cursos de Turismo são privado
 
 ## [2026-07-11] ingest | Segenreich e Castanheira - 2009 - Expansão pós-LDBEN96
 EAD privada cresce 4.700% vs. 200% pública (1996-2006); tecnólogo privado salta de 23,5% pra 68,3%. -> fontes/segenreichcastanheira2009expansao.md
+
+## [2026-07-11] resultado | metodo1_qui_quadrado.R
+V de Cramér: Área 0,128, Grau 0,132, Modalidade 0,395 (mais forte). Resíduos: Pública x Educação +83,57. -> resultados/metodo1_qui_quadrado.md
+
+## [2026-07-11] resultado | metodo2_regressao_logistica.R
+OR ajustados com interação grau x modalidade. modalidadeEAD=0,033 (mais extremo). grauLicenciatura instável -- colinearidade quase determinística com área Educação (100%/93,3%). -> resultados/metodo2_regressao_logistica.md
+
+## [2026-07-11] resultado | metodo3_log_linear.R
+Interação tripla Rede:Grau:Modalidade significativa (deviance=654,13, 2 gl, p<2,2e-16), mais extrema em Tecnológico. -> resultados/metodo3_log_linear.md
+
+## [2026-07-11] resultado | síntese
+Narrativa consolidada dos 3 métodos pra Discussão do artigo. -> resultados/sintese.md

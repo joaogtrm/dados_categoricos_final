@@ -33,3 +33,10 @@
 - [Segenreich e Castanheira 2009 — Expansão pós-LDBEN96](fontes/segenreichcastanheira2009expansao.md) — EAD privada cresce 4.700% vs. 200% pública (1996-2006); tecnólogo privado salta de 23,5% pra 68,3%.
 
 Chaves já em `entrega1/ref.bib`: `carvalho2013mercantilizacao`, `mota2012educacao`, `cunha2007universidade` (este último não está em `raw/`). As demais 7 fontes acima ainda não têm entrada no `.bib` — adicionar ao citar na Discussão do artigo final.
+
+## Resultados estatísticos (dos scripts R)
+
+- [Síntese dos 3 métodos](resultados/sintese.md) — narrativa consolidada pra Discussão: modalidade (não área) é o eixo mais forte de distinção, condicionado ao grau acadêmico.
+- [Método 1 — Qui-quadrado](resultados/metodo1_qui_quadrado.md) — V de Cramér: Área 0,128, Grau 0,132, Modalidade 0,395.
+- [Método 2 — Regressão logística](resultados/metodo2_regressao_logistica.md) — OR ajustados; achado de colinearidade quase determinística Educação×Licenciatura.
+- [Método 3 — Log-linear](resultados/metodo3_log_linear.md) — interação tripla Rede×Grau×Modalidade significativa (p<2,2e-16), mais extrema em Tecnológico.

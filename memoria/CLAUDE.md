@@ -40,6 +40,21 @@ Cada artigo temático de `raw/*.pdf` vira uma página de fonte, estrutura:
 5. **Trechos citáveis** — 1-3 trechos curtos (com página) úteis pra citar direto na Discussão.
 6. **Fonte** — arquivo e nº de páginas.
 
+## Convenções de página de resultado (`memoria/resultados/*.md`)
+
+Uma página por método (1/2/3), com os números reais obtidos rodando os scripts
+R contra a base (não teoria, não literatura — resultado empírico do trabalho).
+Estrutura:
+
+1. **O que foi testado** — variáveis, hipótese, script (`metodoN_*.R`).
+2. **Resultado bruto** — estatística, gl, p-valor, medidas de efeito (V de Cramér/OR/deviance), tal como saiu do R.
+3. **Leitura** — o que o número significa em português, sem jargão.
+4. **Limitações/cautelas** — o que não se pode concluir daquele resultado isoladamente.
+5. **Arquivo de saída** — caminho do `.csv` em `resultados/`.
+
+Uma página de síntese (`memoria/resultados/sintese.md`) amarra os três métodos
+numa narrativa única pra alimentar a Discussão do artigo.
+
 ## Workflow de ingestão
 
 1. Ler a fonte inteira (PDF pode exigir múltiplas chamadas de `pages` por causa
