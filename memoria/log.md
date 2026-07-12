@@ -19,3 +19,6 @@ GLM Poisson sobre tabelas multi-way, hierarquia de termos, deviance, G². -> con
 Nome do arquivo enganoso: conteúdo real é Paradoxo de Simpson, OR ajustado de
 Mantel-Haenszel, teste de Breslow-Day. Página escrita com o conteúdo real
 encontrado, não com o que o nome do arquivo sugeria. -> conceitos/estratificacao_mantel_haenszel.md
+
+## [2026-07-11] rename | slide_concordancia.pdf -> slide_estratificacao_mantel_haenszel.pdf
+Arquivo renomeado em slide/ pra refletir o conteúdo real.

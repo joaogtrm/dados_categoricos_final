@@ -18,7 +18,7 @@
 | `slide/slide_contingencia.pdf` | 68 | tabelas_contingencia.md | ingerido 2026-07-11 |
 | `slide/slide_regressao_logistica.pdf` | 72 | regressao_logistica.md | ingerido 2026-07-11 |
 | `slide/slide_log_linear.pdf` | 55 | modelos_log_lineares.md | ingerido 2026-07-11 |
-| `slide/slide_concordancia.pdf` (nome enganoso — conteúdo real é estratificação/Mantel-Haenszel) | 16 | estratificacao_mantel_haenszel.md | ingerido 2026-07-11 |
+| `slide/slide_estratificacao_mantel_haenszel.pdf` (renomeado; nome original `slide_concordancia.pdf` era enganoso) | 16 | estratificacao_mantel_haenszel.md | ingerido 2026-07-11 |
 
 ## Fontes pendentes
 

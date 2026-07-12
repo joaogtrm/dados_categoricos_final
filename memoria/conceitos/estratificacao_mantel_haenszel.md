@@ -1,10 +1,10 @@
 # Estratificação, Paradoxo de Simpson e Mantel-Haenszel
 
-> **Nota sobre a fonte:** o arquivo de origem se chama `slide_concordancia.pdf`,
-> mas o nome é enganoso — o conteúdo real do arquivo não trata de medidas de
+> **Nota sobre a fonte:** o arquivo de origem se chamava `slide_concordancia.pdf`,
+> mas o nome era enganoso — o conteúdo real do arquivo não trata de medidas de
 > concordância (Kappa etc.). Ele é uma aula sobre estratificação, Paradoxo de
 > Simpson, odds ratio ajustado de Mantel-Haenszel e teste de homogeneidade de
-> Breslow-Day. Esta página documenta o conteúdo real do arquivo.
+> Breslow-Day. Renomeado para `slide_estratificacao_mantel_haenszel.pdf`.
 
 ## 1. Definição
 
@@ -111,7 +111,7 @@ resumidos num único número.
 
 ## 7. Fonte
 
-Arquivo: `slide_concordancia.pdf` (nome enganoso — conteúdo real é sobre
-estratificação/Paradoxo de Simpson/Mantel-Haenszel/Breslow-Day, não sobre
-medidas de concordância). 16 páginas, todas lidas e usadas como base desta
-página.
+Arquivo: `slide_estratificacao_mantel_haenszel.pdf` (nome original `slide_concordancia.pdf`
+era enganoso — conteúdo real é sobre estratificação/Paradoxo de Simpson/
+Mantel-Haenszel/Breslow-Day, não sobre medidas de concordância). 16 páginas,
+todas lidas e usadas como base desta página.
