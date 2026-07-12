@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Plano de finalização — Trabalho Dados Categóricos</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 40px auto; padding: 0 20px; line-height: 1.55; color: #222; }
+  h1 { font-size: 1.6em; border-bottom: 3px solid #b3121b; padding-bottom: 8px; }
+  h2 { font-size: 1.25em; color: #b3121b; margin-top: 2em; }
+  h3 { font-size: 1.05em; margin-top: 1.3em; }
+  .alerta { background: #fff3cd; border-left: 5px solid #b3121b; padding: 12px 16px; margin: 1em 0; font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95em; }
+  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f2; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 3px; font-family: monospace; }
+  pre { background: #f7f7f7; border: 1px solid #ddd; padding: 10px; overflow-x: auto; }
+  .secao { border: 1px solid #ddd; border-radius: 6px; padding: 14px 18px; margin: 1em 0; }
+  ul { margin: 0.3em 0; }
+</style>
+</head>
+<body>
+
+<h1>Plano para finalizar o trabalho — Dados Categóricos</h1>
+
+<div class="alerta">
+Prazo Etapa 2 (artigo final): 15/07/2026. Hoje: 11/07/2026 → restam 4 dias.
+Seminário: 17/07/2026. Priorizar o essencial (metodologia + resultados) antes de polir texto.
+</div>
+
+<h2>0. Onde vocês estão</h2>
+<p><code>entrega1/main.tex</code> já cobre <strong>Pergunta</strong>, <strong>Base de Dados</strong> e
+<strong>Análise Exploratória</strong> (Etapa 1, entregue). Base: Censo da Educação Superior 2024 (INEP),
+720.349 cursos, variável resposta natural = <strong>Rede de Ensino</strong> (pública/privada, binária),
+já cruzada descritivamente com Área Geral CINE, Grau Acadêmico, Modalidade e Região.
+Falta: <strong>testar</strong> essas associações formalmente (não só descrever %) e escrever
+Resumo, Metodologia, Resultados, Discussão, Conclusão.</p>
+
+<h2>1. Métodos estatísticos a usar (mínimo 2 exigidos pelo guia)</h2>
+
+<div class="secao">
+<h3>Método 1 — Teste qui-quadrado de independência + resíduos de Pearson</h3>
+<p>Formaliza a Tabela 1 que já existe no texto (Rede × Área Geral). Testa H0: rede e área geral são
+independentes. Com N=720 mil, o p-valor vai dar ~0 quase certamente — <strong>isso não é interessante
+por si só</strong>. O que importa e o que fica bem no artigo:</p>
+<ul>
+<li><strong>V de Cramér</strong> como medida de força de associação (0 a 1), não só o p-valor.</li>
+<li><strong>Resíduos padronizados de Pearson</strong> por célula — mostra quais áreas
+(Educação, Negócios) puxam a associação, complementando a tabela de %.</li>
+<li>Repetir o mesmo teste para Grau Acadêmico × Rede e Modalidade × Rede (já descritos no texto,
+faltam só formalizar).</li>
+</ul>
+<p>R: <code>chisq.test(tabela)</code>, resíduos em <code>chisq.test(tabela)$stdres</code>,
+V de Cramér com <code>rstatix::cramer_v()</code> ou fórmula direta.</p>
+</div>
+
+<div class="secao">
+<h3>Método 2 — Regressão logística binária</h3>
+<p>Resposta: Rede (1 = pública, 0 = privada). Covariáveis: Área Geral CINE, Grau Acadêmico, Modalidade
+de Ensino, Região — todas já estão na base e já discutidas no texto como "eixos entrelaçados"
+(seção 3.3 do main.tex). A regressão faz o que o texto já promete fazer informalmente: controlar
+um fator pelo outro.</p>
+<ul>
+<li>Reportar <strong>odds ratios</strong> (exp dos coeficientes) com IC 95%, não os coeficientes crus
+— é o que o guia pede (Regressão Logística + Odds Ratio contam como métodos relacionados,
+mas apresentar como 1 método "Regressão Logística com OR" é suficiente, mais um 2º método
+como qui-quadrado já cobre a exigência de 2 métodos).</li>
+<li>Interpretação natural: "controlando por grau e modalidade, cursos de Educação têm chance X vezes
+maior de serem ofertados por instituição pública" — responde à pergunta de pesquisa
+diretamente (é possível distinguir área pública/privada?).</li>
+<li>Cuidado a mencionar no texto (não precisa resolver, só citar como limitação): classes
+desbalanceadas (só 2,8% pública) — o modelo ainda é válido para inferência sobre OR, só não deve
+ser vendido como classificador.</li>
+</ul>
+<p>R: <code>glm(rede ~ area_geral + grau_academico + modalidade + regiao, data = df,
+family = binomial)</code>, depois <code>exp(coef(modelo))</code> e
+<code>exp(confint(modelo))</code>, ou pacote <code>broom::tidy(modelo, exponentiate = TRUE,
+conf.int = TRUE)</code> pra já sair tabela pronta.</p>
+</div>
+
+<div class="secao">
+<h3>Método opcional 3 (só se sobrar tempo) — Log-linear ou análise ordinal</h3>
+<p>Não é necessário: dois métodos já bastam. Se quiserem robustecer, um modelo log-linear
+saturado/reduzido em Rede × Grau Acadêmico × Modalidade (3 vias) mostraria interação de 3
+fatores, mas é o item mais fácil de cortar sob prazo apertado.</p>
+</div>
+
+<h2>2. Estrutura do artigo (o guia exige 15–20 páginas, template LaTeX já em uso)</h2>
+<table>
+<tr><th>Seção</th><th>Já existe?</th><th>O que falta</th></tr>
+<tr><td>Resumo</td><td>Não</td><td>Escrever por último: objetivo, base, métodos, achado principal em ~150 palavras.</td></tr>
+<tr><td>Introdução</td><td>Sim (seção "Pergunta")</td><td>Renomear para "Introdução"; a pergunta de pesquisa já está clara no §3 do texto atual — só confirmar que fica explícita no final do parágrafo.</td></tr>
+<tr><td>Dados</td><td>Sim (seção "Base de Dados")</td><td>Ok como está, talvez só ajustar título da seção.</td></tr>
+<tr><td>Metodologia</td><td>Não</td><td>Descrever os 2 métodos acima e justificar a escolha (variável resposta binária → regressão logística é natural; múltiplas categorias na área → qui-quadrado natural).</td></tr>
+<tr><td>Resultados</td><td>Parcial (só descritiva)</td><td>Adicionar: tabela de OR com IC95%, resultado do teste qui-quadrado (estatística, gl, p-valor, V de Cramér), tabela de resíduos padronizados.</td></tr>
+<tr><td>Discussão</td><td>Não</td><td>Interpretar OR e resíduos à luz da literatura já citada (Carvalho 2013, mercantilização; Mota 2012).</td></tr>
+<tr><td>Conclusão</td><td>Não</td><td>Resumo dos achados + limitação (desbalanceamento, dados observacionais).</td></tr>
+<tr><td>Referências</td><td>Sim, 3 no ref.bib</td><td>Guia pede mínimo 2 — já atendido; pode citar mais 1–2 do <code>raw/</code> se for útil na Discussão (ex. Segenreich e Castanheira 2009 sobre expansão/privatização).</td></tr>
+</table>
+
+<h2>3. Ordem de execução sugerida (4 dias)</h2>
+<ol>
+<li><strong>Dia 1</strong>: rodar qui-quadrado (rede × área geral, rede × grau, rede × modalidade) e
+extrair V de Cramér + resíduos. Rodar regressão logística e extrair tabela de OR.</li>
+<li><strong>Dia 2</strong>: escrever Metodologia e Resultados com as tabelas geradas; converter
+tabelas para <code>booktabs</code>/<code>tabularx</code> como já é o padrão do documento.</li>
+<li><strong>Dia 3</strong>: escrever Discussão e Conclusão; escrever Resumo por último; revisar
+contagem de páginas (15–20 exigidas, hoje o texto tem menos — o Apêndice de código em R pode
+ajudar a completar sem enrolação).</li>
+<li><strong>Dia 4</strong>: revisão geral, compilar PDF, checar citações no <code>ref.bib</code>,
+preparar slides do seminário (15 min: motivação, base, métodos, resultados, interpretação).</li>
+</ol>
+
+<h2>4. Por que essa escolha de métodos é a mais simples e robusta</h2>
+<ul>
+<li>Rede de Ensino já é binária → regressão logística é o método padrão da disciplina para isso,
+sem necessidade de recodificar nada.</li>
+<li>Qui-quadrado + resíduos é o método mais direto pra validar estatisticamente a Tabela 1 que
+já está pronta — zero trabalho de reestruturação de dados.</li>
+<li>Ambos rodam em poucas linhas de R (<code>chisq.test</code>, <code>glm</code>), sem pacotes
+exóticos, com output fácil de tabular e interpretar dentro do prazo de 4 dias.</li>
+</ul>
+
+</body>
+</html>
