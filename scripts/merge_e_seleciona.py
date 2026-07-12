@@ -10,7 +10,7 @@ selecionadas já estão presentes em cadastro_cursos (desnormalizadas).
 from pathlib import Path
 import pandas as pd
 
-BASE = Path(r"C:\Users\joaog\UFES\2026\Dados categorizados")
+BASE = Path(__file__).resolve().parent.parent
 CURSOS_CSV = BASE / "dados" / "MICRODADOS_CADASTRO_CURSOS_2024.CSV"
 SAIDA = BASE / "dados" / "base_categorica_2024.pkl"
 

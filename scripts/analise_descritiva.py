@@ -13,7 +13,7 @@ Saídas em: resultados/descritiva/
     graficos/bi_<VAR>_por_rede.png     — barras agrupadas por TP_REDE
     graficos/heatmap_<VAR>_por_rede.png — heatmap de proporções
 """
-
+#
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -23,7 +23,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.stats import entropy
 
-BASE = Path(r"C:\Users\joaog\UFES\2026\Dados categorizados")
+BASE = Path(__file__).resolve().parent.parent
 PKL = BASE / "dados" / "base_categorica_2024.pkl"
 OUT = BASE / "resultados" / "descritiva"
 TAB = OUT / "tabelas"

@@ -2,7 +2,7 @@
 import pandas as pd
 from pathlib import Path
 
-PKL = Path(r"C:\Users\joaog\UFES\2026\Dados categorizados\dados\base_categorica_2024.pkl")
+PKL = Path(__file__).resolve().parent.parent / "dados" / "base_categorica_2024.pkl"
 
 df = pd.read_pickle(PKL)
 mapa = {1: "Pública", 2: "Privada"}
