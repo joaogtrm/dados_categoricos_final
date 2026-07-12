@@ -65,3 +65,8 @@ Interação tripla Rede:Grau:Modalidade significativa (deviance=654,13, 2 gl, p<
 
 ## [2026-07-11] resultado | síntese
 Narrativa consolidada dos 3 métodos pra Discussão do artigo. -> resultados/sintese.md
+
+## [2026-07-11] resultado | achados_discussao
+8 achados cruzando estatística (métodos 1-3) com as 9 fontes de raw/, cada um com trecho citável.
+Destaque: inversão histórica da EAD (84% pública em 2002, Pinto 2004 -> 96,6% privada em 2024, método 1),
+e explicação estrutural (não erro) pra colinearidade Educação=Licenciatura via Durham 2003 e Pinto 2004. -> resultados/achados_discussao.md

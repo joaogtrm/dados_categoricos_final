@@ -40,3 +40,4 @@ Chaves já em `entrega1/ref.bib`: `carvalho2013mercantilizacao`, `mota2012educac
 - [Método 1 — Qui-quadrado](resultados/metodo1_qui_quadrado.md) — V de Cramér: Área 0,128, Grau 0,132, Modalidade 0,395.
 - [Método 2 — Regressão logística](resultados/metodo2_regressao_logistica.md) — OR ajustados; achado de colinearidade quase determinística Educação×Licenciatura.
 - [Método 3 — Log-linear](resultados/metodo3_log_linear.md) — interação tripla Rede×Grau×Modalidade significativa (p<2,2e-16), mais extrema em Tecnológico.
+- [**Achados para a Discussão**](resultados/achados_discussao.md) — 8 achados cruzando estatística + literatura, prontos pra virar parágrafo do artigo. Destaque: inversão histórica da EAD (84% pública em 2002 → 96,6% privada em 2024).
