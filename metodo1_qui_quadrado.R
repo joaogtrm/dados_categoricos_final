@@ -12,7 +12,9 @@ df$modalidade <- factor(df$TP_MODALIDADE_ENSINO, levels = c(1, 2),
 df$area_geral <- df$NO_CINE_AREA_GERAL
 
 cramer_v <- function(tab) {
-  chi2 <- suppressWarnings(chisq.test(tab)$statistic)
+  # correct=FALSE: sem correção de Yates -- N=706 mil não precisa dela (só
+  # afeta tabelas 2x2, ex. Rede x Modalidade) e ela enviesaria V pra baixo
+  chi2 <- suppressWarnings(chisq.test(tab, correct = FALSE)$statistic)
   n <- sum(tab)
   k <- min(dim(tab)) - 1
   sqrt(as.numeric(chi2) / (n * k))
@@ -20,7 +22,7 @@ cramer_v <- function(tab) {
 
 testar_associacao <- function(var2, nome, dados = df) {
   tab <- table(dados$rede, dados[[var2]], dnn = c("Rede", nome))
-  teste <- suppressWarnings(chisq.test(tab))
+  teste <- suppressWarnings(chisq.test(tab, correct = FALSE))
   list(
     tabela = tab,
     teste = teste,

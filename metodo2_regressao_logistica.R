@@ -28,7 +28,12 @@ df_modelo$modalidade <- relevel(factor(df_modelo$TP_MODALIDADE_ENSINO, levels = 
                                  ref = "Presencial")
 df_modelo$regiao     <- relevel(factor(df_modelo$NO_REGIAO), ref = "Sudeste")
 
-modelo <- glm(rede_bin ~ area_geral + grau + modalidade + regiao,
+# grau*modalidade (não só grau+modalidade): o método 3 (log-linear) já provou que a
+# interação tripla Rede:Grau:Modalidade é significativa (p<2,2e-16) -- um modelo aditivo
+# aqui assumiria implicitamente que o efeito de Modalidade sobre Rede é igual em todo
+# Grau, premissa que o método 3 refuta. Testado: LRT confirma a interação também na
+# escala logística (deviance=495,43, 2 gl, p<2,2e-16; AIC cai de 119578,8 pra 119087,4).
+modelo <- glm(rede_bin ~ area_geral + grau * modalidade + regiao,
               data = df_modelo, family = binomial)
 
 if (!is.null(modelo$fitted.values) &&
@@ -63,10 +68,14 @@ cat(sprintf("Razão de verossimilhança: qui-quadrado = %.1f, gl = %d, p-valor %
             lr_stat, lr_gl, ifelse(lr_p < 2.2e-16, "< 2.2e-16", format.pval(lr_p))))
 cat("\nOdds ratios (IC 95% Wald):\n")
 print(tabela_or, digits = 3, row.names = FALSE)
-cat("\nAviso: grauLicenciatura e modalidadeEAD saem com magnitude extrema e IC largo -- área,\n")
-cat("grau e modalidade são fortemente colineares (Licenciatura quase coincide com área\n")
-cat("Educação; EAD se concentra em áreas específicas). Sinal é confiável, magnitude exata\n")
-cat("desses dois termos deve ser interpretada com cautela na Discussão.\n")
+
+# quantifica a colinearidade estrutural Área=Educação x Grau=Licenciatura (não é só
+# "correlação forte": é quase determinística pela própria taxonomia CINE)
+pct_lic_em_edu <- 100 * mean(df_modelo$area_geral[df_modelo$grau == "Licenciatura"] == "Educação")
+pct_edu_e_lic  <- 100 * mean(df_modelo$grau[df_modelo$area_geral == "Educação"] == "Licenciatura")
+cat(sprintf(
+  "\nAviso: grauLicenciatura sai com magnitude extrema e IC largo. Causa quantificada:\n%.1f%% dos cursos de Licenciatura estão na área Educação, e %.1f%% da área Educação\né Licenciatura -- quase colinearidade determinística pela taxonomia CINE (não é\napenas correlação forte). O OR de grauLicenciatura não deve ser lido como efeito\nparcial \"controlando por área\", porque quase não há variação de grau dentro/fora\nde Educação pra separar os dois efeitos. Sinal (direção) é confiável; magnitude não.\n",
+  pct_lic_em_edu, pct_edu_e_lic))
 
 dir.create("resultados", showWarnings = FALSE)
 write.csv(tabela_or, "resultados/metodo2_odds_ratios.csv", row.names = FALSE)
