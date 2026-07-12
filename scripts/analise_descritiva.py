@@ -87,13 +87,7 @@ def aplicar_rotulos(df: pd.DataFrame) -> pd.DataFrame:
     for col, mapa in MAPAS.items():
         if col not in df.columns:
             continue
-        s = df[col]
-        if isinstance(s.dtype, pd.CategoricalDtype):
-            s = s.astype(object)
-        try:
-            s = pd.to_numeric(s)
-        except (ValueError, TypeError):
-            pass
+        s = df[col].astype(object)
         df[col] = s.map(mapa).fillna(s).astype("category")
     return df
 
