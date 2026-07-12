@@ -70,3 +70,8 @@ Narrativa consolidada dos 3 métodos pra Discussão do artigo. -> resultados/sin
 8 achados cruzando estatística (métodos 1-3) com as 9 fontes de raw/, cada um com trecho citável.
 Destaque: inversão histórica da EAD (84% pública em 2002, Pinto 2004 -> 96,6% privada em 2024, método 1),
 e explicação estrutural (não erro) pra colinearidade Educação=Licenciatura via Durham 2003 e Pinto 2004. -> resultados/achados_discussao.md
+
+## [2026-07-11] resultado | achados_resultados
+Tabelas A-D prontas pra colar na seção Resultados do artigo (qui-quadrado/V de Cramér,
+resíduos, OR do modelo final, contagens do método 3) + lista de números citáveis pro
+Resumo. Sem interpretação/literatura -- isso fica em achados_discussao.md. -> resultados/achados_resultados.md

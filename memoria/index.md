@@ -41,3 +41,4 @@ Chaves já em `entrega1/ref.bib`: `carvalho2013mercantilizacao`, `mota2012educac
 - [Método 2 — Regressão logística](resultados/metodo2_regressao_logistica.md) — OR ajustados; achado de colinearidade quase determinística Educação×Licenciatura.
 - [Método 3 — Log-linear](resultados/metodo3_log_linear.md) — interação tripla Rede×Grau×Modalidade significativa (p<2,2e-16), mais extrema em Tecnológico.
 - [**Achados para a Discussão**](resultados/achados_discussao.md) — 8 achados cruzando estatística + literatura, prontos pra virar parágrafo do artigo. Destaque: inversão histórica da EAD (84% pública em 2002 → 96,6% privada em 2024).
+- [**Achados para os Resultados**](resultados/achados_resultados.md) — tabelas A-D prontas (χ²/V de Cramér, resíduos, OR, contagens) + lista de números citáveis pro Resumo, sem interpretação (isso fica na Discussão).
