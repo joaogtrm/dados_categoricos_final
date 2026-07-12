@@ -1,7 +1,8 @@
 # Método 1: qui-quadrado de independência + V de Cramér + resíduos de Pearson
 # Rede de Ensino x (Área Geral CINE, Grau Acadêmico, Modalidade de Ensino)
 
-df <- read.csv("dados/base_categorica_2024.csv", stringsAsFactors = FALSE)
+df <- read.csv("dados/base_categorica_2024.csv", stringsAsFactors = FALSE,
+                na.strings = c("", "NA")) # pandas grava NaN em coluna texto como campo vazio
 
 df$rede <- factor(df$TP_REDE, levels = c(1, 2), labels = c("Pública", "Privada"))
 df$grau <- factor(df$TP_GRAU_ACADEMICO, levels = c(1, 2, 3),
