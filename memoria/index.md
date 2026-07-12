@@ -34,6 +34,11 @@
 
 Chaves já em `entrega1/ref.bib`: `carvalho2013mercantilizacao`, `mota2012educacao`, `cunha2007universidade` (este último não está em `raw/`). As demais 7 fontes acima ainda não têm entrada no `.bib` — adicionar ao citar na Discussão do artigo final.
 
+## Escrita do artigo
+
+- [Plano de escrita](plano_escrita_artigo.md) — ordem das seções (Metodologia → Resultados → Discussão → ... → Resumo).
+- [Regras de escrita](regras_escrita.md) — como escrever a prosa: sem em dash, concreto, palavras simples, sem tom de LLM.
+
 ## Resultados estatísticos (dos scripts R)
 
 - [Síntese dos 3 métodos](resultados/sintese.md) — narrativa consolidada pra Discussão: modalidade (não área) é o eixo mais forte de distinção, condicionado ao grau acadêmico.

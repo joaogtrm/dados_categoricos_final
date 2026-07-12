@@ -75,3 +75,7 @@ e explicação estrutural (não erro) pra colinearidade Educação=Licenciatura 
 Tabelas A-D prontas pra colar na seção Resultados do artigo (qui-quadrado/V de Cramér,
 resíduos, OR do modelo final, contagens do método 3) + lista de números citáveis pro
 Resumo. Sem interpretação/literatura -- isso fica em achados_discussao.md. -> resultados/achados_resultados.md
+
+## [2026-07-11] guia | regras_escrita
+Regras de estilo pra prosa do artigo (nunca em dash, concreto sobre polido, palavras simples,
+sem tom de LLM, mostrar concreto antes de generalizar). Complementa plano_escrita_artigo.md. -> regras_escrita.md
