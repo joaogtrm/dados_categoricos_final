@@ -1,0 +1,41 @@
+# Schonarth & Moraes — Análise comparativa entre as matrizes curriculares dos Cursos Superiores de Tecnologia em Gestão da Qualidade (CSTGQ) presenciais em Curitiba - PR
+
+## Referência
+
+SCHONARTH, Heron; MORAES, Paulo Eduardo Sobreira. **Análise comparativa entre as matrizes curriculares dos cursos superiores de tecnologia em gestão da qualidade (CSTGQ) presenciais em Curitiba - PR**. *Revista Qualidade Emergente*, v. 6, n. 2, p. 20-40.
+
+Heron Schonarth é aluno do Curso de Tecnologia em Gestão da Qualidade da UFPR (artigo apresentado como Trabalho de Conclusão de Curso, 7º período, 2016); Paulo Eduardo Sobreira Moraes é o professor orientador na UFPR. Nota: o cabeçalho da revista indica "2015" no volume, mas o próprio artigo se identifica como TCC de 2016 e cita fontes de 2016 (PUC, 2016; Santa Cruz, 2016; Sociesc, 2016; acessos datados de 15/11/2016) — a data de publicação efetiva é portanto posterior a 2015, provavelmente 2016 ou depois. Arquivo local nomeado `moraes2025cstgq` (chave adotada nesta wiki); ainda não está em `entrega1/ref.bib` (chaves existentes: `carvalho2013mercantilizacao`, `cunha2007universidade`, `mota2012educacao`). Chave bibtex sugerida: `schonarth2016cstgq`.
+
+## Resumo
+
+O artigo avalia e compara as matrizes curriculares dos cinco Cursos Superiores de Tecnologia em Gestão da Qualidade (CSTGQ) ofertados na modalidade presencial em Curitiba-PR entre 2015 e 2016: CETEP, UFPR, PUC-PR, Faculdades Santa Cruz e SOCIESC. A partir de dados coletados nos sites oficiais de cada instituição, as disciplinas de cada matriz foram agrupadas em seis categorias de afinidade temática (Ferramentas da Qualidade; Gestão e Estratégias; Economia, Contabilidade e Custos; Marketing, Relações Humanas e Sociais; Processo e Produção; Estatística e Métodos Quantitativos), permitindo comparar carga horária total, número de disciplinas e distribuição percentual entre categorias em cada instituição. O objetivo declarado não é eleger o "melhor" curso, mas mapear similaridades e diferenças de ênfase curricular entre instituições de naturezas distintas (uma federal pública — UFPR — e quatro privadas) que ofertam o mesmo curso, na mesma modalidade e na mesma cidade.
+
+## Principais argumentos/achados
+
+- Segundo o MEC (2010), o Brasil tinha à época apenas 5% das matrículas de graduação concentradas em cursos superiores de tecnologia, contra quase 50% nos EUA — os tecnólogos são descritos como um formato de graduação ainda pouco conhecido/aceito socialmente no Brasil.
+- Carga horária total das 5 instituições variou de 1.460h (Santa Cruz) a 1.800h (PUC), média de 1.594h; a PUC tem cerca de 23% a mais de horas totais que UFPR e Santa Cruz.
+- Número de disciplinas: a UFPR se destaca com 32 matérias, 52,38% a mais que o CETEP (a instituição com menos disciplinas).
+- Em **quatro das cinco instituições** (CETEP, PUC, UFPR, Santa Cruz — pública e privadas misturadas), as três categorias mais representativas da carga horária foram as mesmas: **Ferramentas da Qualidade, Gestão e Estratégias, e Marketing/Relações Humanas e Sociais**, concentrando entre 72,6% e 80% do tempo total do curso.
+- A SOCIESC (privada) é a única exceção ao padrão: prioriza Ferramentas da Qualidade, Estatística e Métodos Quantitativos, e Gestão e Estratégias (70,73% da carga horária), com peso bem maior em conteúdo quantitativo e menor em Marketing/RH do que as demais.
+- UFPR (a única pública da amostra) tem a menor média de horas-aula por categoria entre as cinco instituições (45,93%, contra 76,19% do CETEP), mas segue o mesmo padrão de concentração das privadas (Ferramentas da Qualidade, Gestão e Estratégias, Marketing/RH somam 75,51% do curso).
+- Dado de mercado citado da própria PUC-PR: em pesquisa com 55 grandes empresas de Curitiba, 43% das admissões realizadas na cidade em 2008 poderiam ser atendidas por tecnólogos — usado para justificar a aposta institucional em cursos tecnólogos (a PUC oferta 8 cursos dessa modalidade).
+- Todas as cinco instituições — CETEP (1986), PUC-PR (grupo Marista), Santa Cruz (1993), UFPR (TGQ iniciado em 2009) e SOCIESC (1959/1985) — oferecem o CSTGQ dentro de um portfólio maior de cursos tecnólogos (de 3 a 8 cursos tecnológicos cada), o que os autores associam à tendência de expansão da oferta tecnológica orientada ao mercado de trabalho, independentemente da natureza jurídica da mantenedora.
+- Conclusão central do artigo: existem "sim, diversas similaridades" estruturais entre as matrizes de instituições públicas e privadas (foco maior em Ferramentas da Qualidade e Gestão e Estratégias), e as diferenças observadas (como o perfil quantitativo da SOCIESC) não se organizam por natureza pública/privada, mas por escolha pedagógica individual de cada instituição.
+
+## Relevância pro trabalho
+
+Este é o artigo mais nichado dos nove usados na wiki — um estudo de caso com n=5 instituições, um único curso (Gestão da Qualidade), uma única cidade (Curitiba) e, crucialmente, uma única modalidade fixada por desenho: **todos os cursos avaliados são presenciais** (foi o próprio critério de seleção da amostra). Isso o torna um contraponto qualitativo valioso ao achado do método 3 (log-linear): a interação tripla Rede x Grau x Modalidade é significativa (p<2,2e-16) e o padrão mais extremo de divergência entre redes aparece justamente no grau Tecnólogo — pública concentrada em presencial, privada quase toda em EAD (96,6% da oferta privada é EAD). O CSTGQ presencial é exatamente a fatia minoritária dentro da oferta privada de Tecnólogo que esse achado marginaliza estatisticamente.
+
+O que o artigo mostra é revelador para a Discussão: quando se controla por modalidade (presencial) e por área (Gestão da Qualidade), a distinção público x privado praticamente desaparece na análise curricular — UFPR (pública) e as quatro privadas convergem no mesmo padrão de ênfase (Ferramentas da Qualidade + Gestão e Estratégias + Marketing/RH dominando ~75-80% da carga horária). Isso sugere uma leitura possível para os resultados do método 3: a diferença entre redes captada nos dados do Censo 2024 não estaria necessariamente no *conteúdo pedagógico* dos cursos tecnólogos em si, mas na *escolha estratégica de modalidade de oferta* — a rede privada dispersa a maior parte de sua oferta tecnóloga para o EAD (mais escalável/barato), enquanto o pequeno resíduo presencial que resta (como os CSTGQ estudados aqui) tende a se parecer estruturalmente com o que a rede pública oferta. Também reforça, com o dado do MEC (2010) sobre a baixa adesão brasileira aos tecnólogos (5% vs. quase 50% nos EUA), que o próprio grau Tecnólogo já é uma modalidade de nicho no sistema — o que ajuda a contextualizar por que ele concentra o efeito mais extremo de interação encontrado no método 3.
+
+Limitação a registrar: amostra pequena (5 IES, 1 cidade, 1 curso), sem teste estatístico formal — o artigo é qualitativo/descritivo, não pode ser generalizado para todo o universo Tecnólogo x Rede x Modalidade, mas serve como vinheta ilustrativa/estudo de caso da minoria presencial dentro do grau Tecnólogo.
+
+## Trechos citáveis
+
+- "De acordo com MEC (2010) ao comparar o Brasil com outros países poderíamos justificar a possibilidade de avanço dos Tecnólogos, neste exemplo, temos no Brasil apenas 5% das matriculas de graduação em tecnologias e nos EUA representam quase 50%." (p. 21)
+- "As empresas, aos poucos, conhecem esse novo perfil de profissional e verificam que o tecnólogo possui uma formação bastante sólida. De acordo com as pesquisas da PUCPR realizadas com 55 grandes empresas de Curitiba, 43% das admissões realizadas na cidade, em 2008, poderiam ser atendidas por tecnólogos." (PUC, 2016, apud p. 28)
+- "[...] destacar que os cursos apresentam, sim, diversas similaridades como maior foco em categorias de Ferramentas da Qualidade; Gestão e Estratégias como no caso das entidades CETEP, PUC, UFPR e Santa Cruz. E diferenças como há na Sociesc um enfoque com grande representatividade para a categoria Estatística e Métodos Quantitativos." (p. 38)
+
+## Fonte
+
+Arquivo: `raw/Moraes - 2025 - Analise comparativa entre matrizes curriculares dos cursos superiores de tecnologia em gestao da qualidade CSTGQ presenciais em Curitiba PR.pdf` — 21 páginas (paginação original da revista: p. 20-40).

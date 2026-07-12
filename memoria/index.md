@@ -20,6 +20,16 @@
 | `slide/slide_log_linear.pdf` | 55 | modelos_log_lineares.md | ingerido 2026-07-11 |
 | `slide/slide_estratificacao_mantel_haenszel.pdf` (renomeado; nome original `slide_concordancia.pdf` era enganoso) | 16 | estratificacao_mantel_haenszel.md | ingerido 2026-07-11 |
 
-## Fontes pendentes
+## Literatura temática (de `raw/`)
 
-- `raw/*.pdf` (9 artigos temáticos sobre educação superior no Brasil, já parcialmente citados em `entrega1/ref.bib`) — não ingeridos nesta wiki ainda. Ingerir quando formos escrever a Discussão do artigo final, cruzando os achados estatísticos (métodos 1-3) com a literatura sobre expansão/privatização da educação superior.
+- [Alonso 2010 — Expansão e EaD](fontes/alonso2010ead.md) — lógica privatista/quantitativista da expansão, EaD nascente (2007-08) já concentrada na privada.
+- [Benevides Soares et al. 2023 — Satisfação com o curso](fontes/benevidessoares2023satisfacao.md) — privados ligam satisfação a retorno financeiro/institucional; públicos, a envolvimento acadêmico.
+- [Carvalho 2013 — Mercantilização](fontes/carvalho2013mercantilizacao.md) — já citado em `ref.bib` (`carvalho2013mercantilizacao`). Crescimento assimétrico das lucrativas, EAD puxada por elas já em 2008-09, financeirização.
+- [Durham — Ensino superior público e privado](fontes/durham_ensino_publico_privado.md) — trajetória histórica 1808-2003, origem do "mass private sector" nos anos 70, vínculo público-pesquisa.
+- [Martins 2002 — O setor privado](fontes/martins2002setorprivado.md) — resenha (não artigo original) sobre a tese do "mass private sector" como absorvedor de demanda de massa.
+- [Moraes 2025 — CSTGQ Curitiba](fontes/moraes2025cstgq.md) — estudo de caso de tecnólogo presencial; pública e privadas convergem no currículo quando a modalidade é a mesma.
+- [Mota e Anjos 2012 — Turismo no Nordeste](fontes/mota2012educacao.md) — já citado em `ref.bib` (`mota2012educacao`). 92% dos cursos de Turismo são privados; oferta federal 100% Tecnólogo.
+- [Pinto 2004 — Acesso à educação superior](fontes/pinto2004acesso.md) — ângulo complementar (quem acessa, não o que é ofertado): pública é proporcionalmente menos elitizada.
+- [Segenreich e Castanheira 2009 — Expansão pós-LDBEN96](fontes/segenreichcastanheira2009expansao.md) — EAD privada cresce 4.700% vs. 200% pública (1996-2006); tecnólogo privado salta de 23,5% pra 68,3%.
+
+Chaves já em `entrega1/ref.bib`: `carvalho2013mercantilizacao`, `mota2012educacao`, `cunha2007universidade` (este último não está em `raw/`). As demais 7 fontes acima ainda não têm entrada no `.bib` — adicionar ao citar na Discussão do artigo final.

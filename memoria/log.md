@@ -22,3 +22,34 @@ encontrado, não com o que o nome do arquivo sugeria. -> conceitos/estratificaca
 
 ## [2026-07-11] rename | slide_concordancia.pdf -> slide_estratificacao_mantel_haenszel.pdf
 Arquivo renomeado em slide/ pra refletir o conteúdo real.
+
+## [2026-07-11] rename | Moraes...pdf
+Nome original em raw/ tinha quebras de linha literais (bug de arquivo),
+renomeado pra nome de linha única sem alterar conteúdo.
+
+## [2026-07-11] ingest | Alonso - 2010 - A expansão do ensino superior no Brasil e a EaD
+Lógica privatista/quantitativista da expansão (INEP 2007-08), EaD nascente já concentrada na privada. -> fontes/alonso2010ead.md
+
+## [2026-07-11] ingest | Benevides Soares et al. - 2023 - Satisfação com o curso
+Privados ligam satisfação a retorno financeiro/institucional; públicos, a envolvimento acadêmico. -> fontes/benevidessoares2023satisfacao.md
+
+## [2026-07-11] ingest | Carvalho - 2013 - Mercantilização da educação superior
+Já citado em ref.bib (carvalho2013mercantilizacao). Aprofundado com achados empíricos: EAD puxada pelas lucrativas, financeirização, oligopolização. -> fontes/carvalho2013mercantilizacao.md
+
+## [2026-07-11] ingest | Durham - O ensino superior no Brasil público e privado
+Trajetória histórica 1808-2003, origem do "mass private sector" nos anos 70. -> fontes/durham_ensino_publico_privado.md
+
+## [2026-07-11] ingest | Martins - 2002 - O setor privado
+É resenha, não artigo original. Tese do "mass private sector" como absorvedor de demanda de massa. -> fontes/martins2002setorprivado.md
+
+## [2026-07-11] ingest | Moraes - 2025 - CSTGQ Curitiba
+Estudo de caso de tecnólogo presencial em Curitiba; convergência curricular pública/privada quando modalidade é a mesma. -> fontes/moraes2025cstgq.md
+
+## [2026-07-11] ingest | Mota e Anjos - 2012 - Turismo no Nordeste
+Já citado em ref.bib (mota2012educacao). 92% dos cursos de Turismo são privados. -> fontes/mota2012educacao.md
+
+## [2026-07-11] ingest | Pinto - 2004 - O acesso à educação superior no Brasil
+Ângulo complementar (acesso, não oferta): pública proporcionalmente menos elitizada. -> fontes/pinto2004acesso.md
+
+## [2026-07-11] ingest | Segenreich e Castanheira - 2009 - Expansão pós-LDBEN96
+EAD privada cresce 4.700% vs. 200% pública (1996-2006); tecnólogo privado salta de 23,5% pra 68,3%. -> fontes/segenreichcastanheira2009expansao.md

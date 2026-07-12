@@ -29,6 +29,17 @@ Cada página de conceito estatístico segue esta estrutura:
 
 Referências cruzadas usam `[[nome-do-arquivo-sem-extensão]]`.
 
+## Convenções de página de fonte (`memoria/fontes/*.md`)
+
+Cada artigo temático de `raw/*.pdf` vira uma página de fonte, estrutura:
+
+1. **Referência** — autor(es), ano, título completo, e se já existe em `entrega1/ref.bib` (chave bibtex) ou não.
+2. **Resumo** — do que trata o artigo, 1 parágrafo.
+3. **Principais argumentos/achados** — os pontos que o artigo defende ou encontra, em bullets.
+4. **Relevância pro trabalho** — como isso se conecta com a pergunta de pesquisa (distinção entre áreas ofertadas por rede pública x privada) e com os achados dos métodos 1/2/3.
+5. **Trechos citáveis** — 1-3 trechos curtos (com página) úteis pra citar direto na Discussão.
+6. **Fonte** — arquivo e nº de páginas.
+
 ## Workflow de ingestão
 
 1. Ler a fonte inteira (PDF pode exigir múltiplas chamadas de `pages` por causa
@@ -40,7 +51,4 @@ Referências cruzadas usam `[[nome-do-arquivo-sem-extensão]]`.
 ## Status
 
 - `slide/*.pdf` (6 arquivos): ingeridos — ver `index.md`.
-- `raw/*.pdf` (9 artigos temáticos, já citados em parte no `ref.bib`): ainda
-  não ingeridos nessa wiki. Ingerir quando formos escrever a Discussão do
-  artigo final, cruzando achados estatísticos com a literatura sobre expansão/
-  privatização da educação superior.
+- `raw/*.pdf` (9 artigos temáticos): ingeridos — ver `index.md`.
