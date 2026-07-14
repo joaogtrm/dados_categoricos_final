@@ -193,7 +193,14 @@ Negócios, administração e direito & 29,62 & 14,61 & $-$ 15,01 \\
 
 O curso típico da rede privada está em \textit{Negócios, administração e direito} (29,6\%), enquanto o da rede pública está em \textit{Educação} (43,6\%). A rede pública é, no conjunto, mais concentrada (Educação responde por quase metade do total), enquanto a privada se distribui entre Negócios, Educação, Saúde, TIC e Serviços.
 
-Em termos de perfil, as áreas com maior peso na rede pública são Educação ($+24,0$ p.p.), Engenharias ($+3,9$), Agricultura/Veterinária ($+2,4$), Ciências naturais e matemática ($+2,0$) e Programas básicos ($+1,1$), configurando um perfil voltado à formação de professores, ciências básicas e pesquisa. Já as áreas com maior peso na rede privada são Negócios/Direito ($-15,0$ p.p.), Saúde ($-6,8$), Serviços ($-5,7$), Artes/Humanidades ($-2,7$) e Computação/TIC ($-2,0$), compatíveis com graduações de forte demanda no mercado de trabalho.
+Em termos de perfil, as áreas com maior peso na rede pública são Educação ($+24,0$ p.p.), Engenharias ($+3,9$), Agricultura/Veterinária ($+2,4$), Ciências naturais e matemática ($+2,0$) e Programas básicos ($+1,1$), configurando um perfil voltado à formação de professores, ciências básicas e pesquisa. Já as áreas com maior peso na rede privada são Negócios/Direito ($-15,0$ p.p.), Saúde ($-6,8$), Serviços ($-5,7$), Artes/Humanidades ($-2,7$) e Computação/TIC ($-2,0$), compatíveis com graduações de forte demanda no mercado de trabalho. A Figura~\ref{fig:area-bi} apresenta essa distribuição, evidenciando o contraste entre a Educação, que domina a rede pública, e Negócios, administração e direito, que domina a privada.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width= \textwidth]{descritiva_plots/bi_NO_CINE_AREA_GERAL_por_rede.png}
+\caption{Distribuição percentual das áreas gerais CINE dentro de cada rede de ensino.}
+\label{fig:area-bi}
+\end{figure}
 
 Quanto ao grau acadêmico, a rede privada é majoritariamente composta por tecnólogos (48,0\%), enquanto a pública se divide quase igualmente entre bacharelado (42,8\%) e licenciatura (43,6\%) (Figura~\ref{fig:grau-bi}). 
 
@@ -315,6 +322,8 @@ Tecnológico  & EAD        & 1.153 & 332.227 \\
 \label{tab:loglin}
 \end{table}
 
+A leitura da Tabela~\ref{tab:loglin} mostra onde a interação tripla se concentra. No grau Tecnológico, a rede pública se divide quase meio a meio entre presencial (1.318) e EAD (1.153), enquanto a rede privada é 98,8\% a distância (332.227 contra 3.876 presenciais). No Bacharelado o contraste vai na mesma direção, porém menos extremo, e na Licenciatura ele quase some: o resíduo padronizado do modelo sem a interação tripla é de $\pm23{,}96$ no Tecnológico, cai para $\pm19{,}96$ no Bacharelado e chega a apenas $\pm2{,}31$ na Licenciatura, no limite do referencial de 2 desvios. É por isso que remover a interação tripla piora tanto o ajuste: o efeito da modalidade sobre a rede não é o mesmo nos três graus, e o modelo aditivo erra mais justamente onde a rede privada empurra o Tecnológico inteiro para a EAD.
+
 % ---------------------------------------------------------------------------
 % 5. DISCUSSÃO
 % ---------------------------------------------------------------------------
@@ -327,12 +336,17 @@ A concentração de 97,2\% dos cursos na rede privada tem a mesma leitura de lon
 
 A interação tripla do Método 3 também se justifica nesse panorama. O termo se concentra no grau Tecnológico, onde a rede pública se divide quase meio a meio entre presencial e EAD, enquanto a privada é 98,8\% a distância. \textcite{segenreichExpansaoPrivatizacaoDiferenciacao2009} documentam que os Centros de Educação Tecnológica nasceram públicos, mas a rede privada inverteu a predominância saltando de 23,5\% para 68,3\% de participação entre 2001 e 2006. \textcite{carvalhoMercantilizacaoEducacaoSuperior2013} argumenta que cursos orientados para negócios, de ciclo curto e sem exigência de pesquisa minimizam custo por aluno. Tecnólogo e EAD são o mesmo pacote comercial, adotado em larga escala pelas instituições privadas.
 
+Essa distinção, contudo, é de estratégia de oferta e não de conteúdo do curso. \textcite{schonarth2016cstgq} comparam as matrizes curriculares de cinco cursos de Tecnologia em Gestão da Qualidade presenciais em Curitiba, sendo um de instituição pública e quatro de privadas. Fixadas a modalidade e a área, as três mesmas categorias de disciplina dominam entre 72,6\% e 80\% da carga horária tanto na pública quanto nas privadas. Quando a modalidade e a área param de variar, o que resta da diferença entre as redes é pequeno. O contraste que os três métodos capturam está na escolha de para onde levar a oferta, e não no desenho pedagógico de um curso comparável.
+
 O achado mais desconfortável do Método 2 também é o mais informativo depois de contextualizado. O coeficiente de \texttt{grauLicenciatura} saiu instável pois a colinearidade quase determinística não é falha, é fato. \textcite{durhamEnsinoSuperiorNo} lembra que a obrigatoriedade da formação de professores remonta à Era Vargas na esfera pública. \textcite{pintoAcessoEducacaoSuperior2004} mostra que as Licenciaturas tinham 61\% de vagas não preenchidas por causa da baixa remuneração. É uma área que o investimento privado voltado a retorno financeiro evita. O resíduo de $+83{,}57$ em Pública $\times$ Educação mede exatamente isso.
 
-Três ressalvas delimitam até onde os dados sustentam a conclusão:
-1. \textbf{Temporalidade:} \textcite{alonsoExpansaoEnsinoSuperior2010} aponta que Pedagogia era área forte na rede privada há menos de vinte anos. A base de 2024 não explica inteiramente a força-motriz que recompôs o mercado para o atual cenário monopolizado na rede pública.
-2. \textbf{Heterogeneidade Privada:} A base separa apenas pública e privada. \textcite{carvalhoMercantilizacaoEducacaoSuperior2013} registra que as instituições estritamente lucrativas concentram a maior agressividade no mercado EAD, enquanto as comunitárias mantêm perfil misto, o que provavelmente mascara um quadro ainda mais discrepante estatisticamente.
-3. \textbf{Efeito Confundidor de Grau:} Parte do que os métodos atribuem à rede sofre sobreposição da carga pedagógica dos graus. Como mostra \textcite{motaEDUCACAOSUPERIOREM2012}, cursos tecnológicos dos Institutos Federais já têm perfil operacional. Separar grau de rede era necessário para isolar esse efeito, mas a leitura prática exige sempre essa ressalva.
+Do lado de quem cursa, essa divisão de oferta encontra uma divisão de expectativa. \textcite{benevidessoares2023satisfacao}, ao comparar a satisfação de estudantes de instituições públicas e privadas no Rio de Janeiro, observam que os alunos da rede privada avaliam o curso sobretudo pelo retorno do investimento e pela estrutura da instituição, enquanto os da rede pública associam a satisfação ao próprio envolvimento acadêmico e à pesquisa. É a mesma linha que separa a oferta: cursos de negócios, tecnólogos e a distância, de retorno rápido, na rede privada, e bacharelados e licenciaturas presenciais, ligados à formação e à pesquisa, na pública.
+
+A comparação entre as redes tem ainda um limite temporal que os dados de 2024 não resolvem sozinhos. \textcite{alonsoExpansaoEnsinoSuperior2010}, com base no Censo de 2007, registra que cerca de 52\% das matrículas privadas se concentravam em três cursos, nesta ordem: Administração, Direito e Pedagogia. Há menos de vinte anos, portanto, a Pedagogia era uma das áreas fortes da rede privada, e não da pública. Nos dados de 2024 o quadro se inverteu: a Educação é a área que mais puxa para a rede pública, e responde pelo maior resíduo de todo o trabalho ($+83{,}57$). Alguma coisa recompôs o mercado de formação de professores entre 2007 e 2024, seja a expansão de licenciaturas via institutos federais e programas de formação docente, sejam mudanças na forma de classificar as áreas entre o antigo agrupamento do INEP e a atual classificação CINE. A base de 2024 mostra o ponto de chegada dessa recomposição, mas não a força que a produziu.
+
+Duas ressalvas finais delimitam até onde os dados sustentam a conclusão:
+1. \textbf{Heterogeneidade da rede privada:} A base separa apenas pública e privada. \textcite{carvalhoMercantilizacaoEducacaoSuperior2013} registra que as instituições estritamente lucrativas concentram a maior agressividade no mercado EAD, enquanto as comunitárias mantêm perfil misto, o que provavelmente mascara um quadro ainda mais discrepante estatisticamente.
+2. \textbf{Efeito confundidor de grau:} Parte do que os métodos atribuem à rede sofre sobreposição da carga pedagógica dos graus. Como mostra \textcite{motaEDUCACAOSUPERIOREM2012}, cursos tecnológicos dos Institutos Federais já têm perfil operacional. Separar grau de rede era necessário para isolar esse efeito, mas a leitura prática exige sempre essa ressalva.
 
 % ---------------------------------------------------------------------------
 % 6. CONCLUSÃO
